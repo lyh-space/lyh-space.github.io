@@ -1,18 +1,19 @@
 .niceButton {
   display: inline-block;
-  padding: 0.2rem 0.3rem;
+  vertical-align: top;
+  padding: 0.2rem 0.4rem 0.1rem 0.5rem;
   font-family: "Times New Roman", FangSong, STFangsong, sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.1rem;
   color: #000;
   background-color: #ddd;
   border: none;
-  border-radius: 0.7rem;
+  border-radius: 0.4rem;
   box-shadow: 0.1rem 0.2rem #c2c2c2;
 }
 .niceButton:hover {

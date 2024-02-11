@@ -1,18 +1,19 @@
 .niceButton {
   display: inline-block;
-  padding: 0.2rem 0.3rem;
+  vertical-align: top;
+  padding: 0.2rem 0.4rem 0.1rem 0.5rem;
   font-family: "Times New Roman", FangSong, STFangsong, sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.1rem;
   color: #000;
   background-color: #ddd;
   border: none;
-  border-radius: 0.7rem;
+  border-radius: 0.4rem;
   box-shadow: 0.1rem 0.2rem #c2c2c2;
 }
 .niceButton:hover {
@@ -272,13 +273,13 @@ body {
   color: #494e52;
   font-size: 1.8em;
   line-height: 1.5;
-  font-family: "Times New Roman", FangSong, STFangsong, sans-serif;
+  font-family: "Times New Roman", "Source Han Serif CN", FangSong, STFangsong, sans-serif;
   scroll-behavior: smooth;
 }
 a,
 span,
 .btn {
-  font-family: "Times New Roman", FangSong, STFangsong, sans-serif;
+  font-family: "Times New Roman", "Source Han Serif CN", FangSong, STFangsong, sans-serif;
 }
 img {
   max-width: 100%;
@@ -492,6 +493,13 @@ p {
 .page article h3 {
   font-size: 2rem;
 }
+.page article h4 {
+  font-size: 2rem;
+  margin-block-start: 0em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
 .page article p,
 .page article li {
   font-size: 1.8rem;
@@ -520,7 +528,7 @@ p {
   text-align: right;
 }
 .page article code {
-  font-family: "Times New Roman", FangSong, STFangsong, sans-serif;
+  font-family: "Times New Roman", "Source Han Serif CN", FangSong, STFangsong, sans-serif;
   padding: 0.2rem 0.3rem;
   background: rgba(27,31,35,0.05);
   word-wrap: break-word;
