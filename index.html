@@ -1,18 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=https://439wbpn61269.vicp.fun/">
-<title>等待跳转</title>
+    <meta charset="utf-8">
+    <title>Li Yuhao&#39;s Home</title>
+    <link rel="stylesheet" href="/style/style.css"/>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 </head>
+
 <body>
 
-  <p>
-    如果没有自动跳转，请点击以下链接：
-  </p>
+<div class="wrap">
+        
+    <nav class="NavigationBar">
+        <table>
+            <tr>
+            <td class="TitleTar">
+                <div class="SiteTitle">
+                    <a href="/">Li Yuhao&#39;s Home</a>
+                </div>
+            </td>
+            <td>
+                <div class="SiteNavigation">
+
+                        <a href="/research/"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Research </a> &emsp;
+
+                        <a href="/note/"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Note </a> &emsp;
+
+                        <a href="/share/"><i class="fa fa-folder-open-o" aria-hidden="true"></i> Share </a> &emsp;
+                    
+                </div>
+            </td>
+            </tr>
+        </table>
+    </nav>
+
   
-  <a href="https://439wbpn61269.vicp.fun/">https://439wbpn61269.vicp.fun/</a>
-  <href></href>
+    <div class="MainPage">
+        
+        <style>
+            .round_icon{
+                width: 150px;
+                height: 150px;
+                display: flex;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+        </style>
+
+        <p align="center">
+            <img src="/style/avatar.jpg" class="round_icon"  alt="">
+        </p>
+
+        <p align="center"><b>Li Yuhao</b></p>
+
+        <p align="center">
+            <a href="mailto:liyh536@mail2.sysu.edu.cn"><i class="fa fa-envelope-o" aria-hidden="true"></i> E-Mail </a> &emsp;
+            <a href="https://github.com/lyh-space"><i class="fa fa-github" aria-hidden="true"></i> Github </a> &emsp;
+            <a href="https://orcid.org/0000-0001-5727-2427"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /> ORCID </a>
+        </p>
+
+        <hr>
+
+        <h2>Welcome to My Home</h2>
+        
+        <p>
+            This homepage and my Blog are both based on Hexo and deployed on Github Pages by Github Actions. The theme of the homepage is created by myself using EJS, while the theme of my blog is modified based on the famous Next theme. I will share my research interests, notes, and some projects here.
+        </p>
+        <p>
+            Currently, this site only fits screens wider than 1200 pixels, so <strong>it is not recommended to access this site on mobile devices</strong>.
+        </p>
+
+        </br>
+
+        <hr>
+
+        <h2>About Me</h2>
+
+        <ul>
+            <li>
+                <p>
+                    Undergraduate student in <a target="_blank" rel="noopener" href="https://spe.sysu.edu.cn/"><strong>School of Physics</strong></a>, <a target="_blank" rel="noopener" href="https://www.sysu.edu.cn/"><strong>Sun Yat-sen University</strong></a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    The member of <a target="_blank" rel="noopener" href="https://www.labxing.com/hphuang2018"><strong>PMI Lab</strong></a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    The president of <strong>Society of Physics Students in Sun Yat-sen University</strong> (SPS-SYSU) in 2022-2023
+                </p>
+            </li>
+        </ul>
+
+        <h2>Interested Subjects</h2>
+
+        <ul>
+            <li>
+                <p>
+                    Statistical Physics
+                </p>
+            </li>
+            <li>
+                <p>
+                    Machine Learning, mainly Neural Networks
+                </p>
+            </li>
+            <li>
+                <p>
+                    Programming and Numerical Computation
+                </p>
+            </li>
+        </ul>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>
+                <p>
+                    Languages: &ensp; Mandarin Chinese, English
+                </p>
+            </li>
+            <li>
+                <p>
+                    Programming: &ensp; Python, Mathematica, Matlab, C &amp; C++
+                </p>
+            </li>
+            <li>
+                <p>
+                    Web Development: &ensp; HTML, CSS, JavaScript
+                </p>
+            </li>
+            <li>
+                <p>
+                Graphic design: &ensp; LaTeX, Adobe Illustrator, CAD
+                </p>
+            </li>
+        </ul>
+
+    </div>
   
+</div>
+
+
+<script language=javascript>
+    function siteTime(){
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth()+1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        var t1 = Date.UTC(2024,04,12,14,00,00);
+        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+        var diff = t2-t1;
+        var diffDays = Math.floor((diff/days));
+        document.getElementById("sitetime").innerHTML=diffDays;
+    }
+    siteTime();
+</script>
+
+<div class="SiteFooter">
+    This site has been running for <span id="sitetime"></span> days.
+    <br>
+    Copyright &copy; 2024 Li Yuhao. All Rights Reserved.
+</div>
+
 </body>
+
 </html>

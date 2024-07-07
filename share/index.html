@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>Li Yuhao&#39;s Home</title>
+    <link rel="stylesheet" href="/style/style.css"/>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+
+<div class="wrap">
+        
+    <nav class="NavigationBar">
+        <table>
+            <tr>
+            <td class="TitleTar">
+                <div class="SiteTitle">
+                    <a href="/">Li Yuhao&#39;s Home</a>
+                </div>
+            </td>
+            <td>
+                <div class="SiteNavigation">
+
+                        <a href="/research/"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Research </a> &emsp;
+
+                        <a href="/note/"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Note </a> &emsp;
+
+                        <a href="/share/"><i class="fa fa-folder-open-o" aria-hidden="true"></i> Share </a> &emsp;
+                    
+                </div>
+            </td>
+            </tr>
+        </table>
+    </nav>
+
+  
+    <div class="MainPage">
+        <h1>Share</h1>
+    </div>
+
+
+</div>
+
+
+<script language=javascript>
+    function siteTime(){
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth()+1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        var t1 = Date.UTC(2024,04,12,14,00,00);
+        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+        var diff = t2-t1;
+        var diffDays = Math.floor((diff/days));
+        document.getElementById("sitetime").innerHTML=diffDays;
+    }
+    siteTime();
+</script>
+
+<div class="SiteFooter">
+    This site has been running for <span id="sitetime"></span> days.
+    <br>
+    Copyright &copy; 2024 Li Yuhao. All Rights Reserved.
+</div>
+
+</body>
+
+</html>
