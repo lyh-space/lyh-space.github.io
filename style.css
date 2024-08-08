@@ -13,7 +13,7 @@
   font-size: 1.2rem;
  }
 
- blockquote {
+ .quote {
   display: block;
   padding: 0px 15px 10px 15px;
   border-radius: 20px;  
