@@ -12,15 +12,6 @@
   font-family: 'Book Antiqua';
   font-size: 1.2rem;
  }
-
- .quote {
-  display: block;
-  padding: 0px 15px 10px 15px;
-  border-radius: 20px;  
-  background-color: #eeeeee;
-  position: relative;
-  border: 2px solid #f5f5f5;
-}
  
 * {
     box-sizing: border-box;
@@ -42,6 +33,13 @@
   }
   :lang(en-US) {
     font-family: "Helvetica Neue", Roboto, "Segoe UI", SegoeUI, Helvetica, Arial, sans-serif;
+  }
+
+  .quote {
+    padding: 0px 15px 10px 15px;
+    border-radius: 20px;  
+    background-color: #eeeeee;
+    border: 2px solid #f5f5f5;
   }
 
   .NavigationBar {
