@@ -14,10 +14,16 @@
  }
 
  blockquote {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  unicode-bidi: isolate;
   padding: 0px 15px 10px 15px;
   border-radius: 20px;  
-  background-color: #eeeeee;
-  border: 2px solid #f5f5f5;
+  background-color: #c8c8c833;
+  border: 2px solid #cac8c8;
  }
 
 * {
