@@ -41,12 +41,12 @@
     padding:0;
   }
   .Header {
-    font-size: 35px;
+    font-size: 25px;
     height: 80px;
     margin: 0px;
     padding-left: 15%;
     padding-right: 15%;
-    padding-top: 30px;
+    padding-top: 40px;
     background-color: #dedede70;
     border-bottom-width:4px;
     border-bottom-style:solid;
