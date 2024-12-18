@@ -6,20 +6,20 @@
     <title>Li Yuhao&#39;s Home</title>
     <meta name="description" content="This is the personal homepage of Yu-Hao Li." />
     <link rel="icon" href="/imgs/favicon.ico"/>
-    <link rel="stylesheet" href="/style/style.css"/>
+    <link rel="stylesheet" href="/style/main.css"/>
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"/>
 </head>
 
 <body>
 
 <div class="wrap">
-        
-    <script type="text/javascript" src="style/header.js"></script>
+
+    <div id="head"></div>
   
     <div class="MainPage">
         
         <p align="center">
-            <img src="/style/avatar.jpg" class="round_icon"  alt="">
+            <img src="/imgs/avatar.jpg" class="round_icon"  alt="">
         </p>
 
         <p align="center"><b>Li Yuhao</b></p>
@@ -109,7 +109,12 @@
   
 </div>
 
-<script type="text/javascript" src="style/footer.js"></script>
+<div id="side"></div>
+
+<script>
+$("#head").load("https://lyhspace.com/style/header.html");
+$("#side").load("https://lyhspace.com/style/footer.html");
+</script>
 
 </body>
 
