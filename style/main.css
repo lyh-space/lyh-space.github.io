@@ -40,18 +40,13 @@
     margin:0;
     padding:0;
   }
-  /* :lang(en-US) {
-    font-family: "Helvetica Neue", Roboto, "Segoe UI", SegoeUI, Helvetica, Arial, sans-serif;
-  } */
-
   .Header {
+    font-size: 35px;
     height: 80px;
     margin: 0px;
-    justify-content: space-between;
-    align-items: center;
     padding-left: 15%;
     padding-right: 15%;
-    padding-top: 20px;
+    padding-top: 30px;
     background-color: #dedede70;
     border-bottom-width:4px;
     border-bottom-style:solid;
@@ -82,8 +77,8 @@
     clear: both;
     background-color: #dedede00;
     padding-top: 5px;
-    padding-left: calc((100% - 1200px)/2 + 10px);
-    padding-right: calc((100% - 1200px)/2 + 10px);
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   .wrap {
