@@ -1,7 +1,3 @@
- /* p {
-  font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", Hiragino Sans GB, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
-} */
-
  h1 {
   font-family: 'Book Antiqua';
   font-size: 1.6rem;
@@ -44,17 +40,17 @@
     margin:0;
     padding:0;
   }
-  :lang(en-US) {
+  /* :lang(en-US) {
     font-family: "Helvetica Neue", Roboto, "Segoe UI", SegoeUI, Helvetica, Arial, sans-serif;
-  }
+  } */
 
-  .NavigationBar {
+  .Header {
     height: 80px;
     margin: 0px;
     justify-content: space-between;
     align-items: center;
-    padding-left: calc((100% - 1200px)/2);
-    padding-right: calc((100% - 1200px)/2);
+    padding-left: 15%;
+    padding-right: 15%;
     padding-top: 20px;
     background-color: #dedede70;
     border-bottom-width:4px;
@@ -62,29 +58,12 @@
     border-bottom-color:#d0d0d0b0;
     font-family: 'Book Antiqua', 'Palatino Linotype';
   }
-  .NavigationBar table {
-    width:100%;
-  }
-  .NavigationBar table .TitleTar {
-    width:500px;
-  }
-  .NavigationBar td {
-    vertical-align:bottom;
-  }
-  .NavigationBar a:link {color: #505050; text-decoration: none;}
-  .NavigationBar a:visited {color: #505050; text-decoration: none;}
-  .NavigationBar a:hover, a:active {color: #000000; text-decoration: underline;}
-
-  .SiteTitle {
-    font-size:35px;
-  }
-
-  .SiteNavigation {
-    font-size:25px;
-  }
+  .Header a:link {color: #505050; text-decoration: none;}
+  .Header a:visited {color: #505050; text-decoration: none;}
+  .Header a:hover, a:active {color: #000000; text-decoration: underline;}
 
   .MainPage {
-    width: 1200px;
+    width: 70%;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 140px;
@@ -96,7 +75,7 @@
   .MainPage a:visited {color: #a43339; text-decoration: none;}
   .MainPage a:hover, a:active {color: #e80914; text-decoration: none;}
 
-  .SiteFooter {
+  .Footer {
     margin-top: -80px;
     height: 80px;
     z-index: 9999;
@@ -118,3 +97,12 @@
     clear: both;
   }
   
+  .round_icon{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
