@@ -98,28 +98,82 @@
 
 <div class="MainPage">
 
-    <div style="width: 30%">
+    <h2>Visitors' Information</h2>
+
+    <div style="width: 25%">
         <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Xd5ZB1Z29QUKT6b4BFe0lXI7q9UZvq19Ln8f5ZteGOc"></script>
     </div>
-    
-    <br>
+
+    <p>IP地址: <span id="ip">加载中...</span></p>
+    <p>地区: <span id="region">加载中...</span></p>
+    <p>浏览器: <span id="browser">加载中...</span></p>
+    <p>操作系统: <span id="os">加载中...</span></p>
+
+    <!-- <br>
     
     <table class="bc" align="left"> <tr> <th>
         <script type="text/javascript" src="https://ipaddress.is/js/ipwidget.js"></script>
         <script type="text/javascript">var ip_widget_var = ip_widget_var || [];ip_widget("#eeeeee","#cacaca45","#000000",0,0,800);</script>
         <a href="http://my.ipaddress.is"></a>
-    </th> </tr> </table>
+    </th> </tr> </table> -->
     
-    <br><br><br><br>
+    <h2>Site Disclaimer</h2>
 
     <div id="foot"></div>
     
 </div>
 
+<br><br><br><br><br>
+
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $("#head").load("https://lyhspace.com/style/header.html");
 $("#foot").load("https://lyhspace.com/style/footer.html");
+</script>
+
+<script>
+    // 获取访客的IP和地区信息
+    fetch('http://ip-api.com/json/')
+        .then(response => response.json())
+        .then(data => {
+        // 填充IP和地区信息
+        document.getElementById('ip').textContent = data.query;
+        document.getElementById('region').textContent = `${data.city}, ${data.regionName}, ${data.country}`;
+        })
+        .catch(error => {
+        document.getElementById('ip').textContent = '无法获取IP';
+        document.getElementById('region').textContent = '无法获取地区';
+        console.error('Error fetching IP info:', error);
+        });
+
+    // 获取浏览器和操作系统信息
+    function getBrowser(userAgent) {
+        if (userAgent.indexOf('Chrome') > -1) {
+        return 'Chrome';
+        } else if (userAgent.indexOf('Firefox') > -1) {
+        return 'Firefox';
+        } else if (userAgent.indexOf('Safari') > -1) {
+        return 'Safari';
+        } else {
+        return '未知浏览器';
+        }
+    }
+
+    function getOS(userAgent) {
+        if (userAgent.indexOf('Windows NT') > -1) {
+        return 'Windows';
+        } else if (userAgent.indexOf('Macintosh') > -1) {
+        return 'MacOS';
+        } else if (userAgent.indexOf('Linux') > -1) {
+        return 'Linux';
+        } else {
+        return '未知操作系统';
+        }
+    }
+
+    const userAgent = navigator.userAgent;
+    document.getElementById('browser').textContent = getBrowser(userAgent);
+    document.getElementById('os').textContent = getOS(userAgent);
 </script>
 
 </body>

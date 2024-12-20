@@ -69,26 +69,6 @@
   .MainPage a:link {color: #a43339; text-decoration: none;}
   .MainPage a:visited {color: #a43339; text-decoration: none;}
   .MainPage a:hover, a:active {color: #e80914; text-decoration: none;}
-
-  /* .Footer {
-    margin-top: -80px;
-    height: 80px;
-    z-index: 9999;
-    clear: both;
-    background-color: #dedede00;
-    padding-top: 5px;
-    padding-left: 15%;
-    padding-right: 15%;
-  } */
-
-  /* .wrap {
-    min-height: 100%;
-  }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  } */
   
   .round_icon{
     width: 150px;
