@@ -78,4 +78,37 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
+  }
+
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .globe {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .visitor-info {
+    flex: 1;
+    text-align: left;
+  }
+
+  @media (max-width: 600px) {
+    .content {
+      flex-direction: column; /* 窄屏时改为竖直排列 */
+    }
+    .visitor-info {
+      text-align: center; /* 调整文本居中 */
+    }
+  }

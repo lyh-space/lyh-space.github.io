@@ -100,22 +100,20 @@
 
     <h2>Visitors' Information</h2>
 
-    <div style="width: 25%">
-        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Xd5ZB1Z29QUKT6b4BFe0lXI7q9UZvq19Ln8f5ZteGOc"></script>
+    <div class="content">
+
+        <div class="globe">
+            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Xd5ZB1Z29QUKT6b4BFe0lXI7q9UZvq19Ln8f5ZteGOc"></script>
+        </div>
+
+        <div class="visitor-info">
+            <p>Your IP: <span id="ip">loading...</span></p>
+            <p>From: <span id="region">loading...</span></p>
+            <p>Browser: <span id="browser">loading...</span></p>
+            <p>System: <span id="os">loading...</span></p>
+        </div>
+
     </div>
-
-    <p>IP地址: <span id="ip">加载中...</span></p>
-    <p>地区: <span id="region">加载中...</span></p>
-    <p>浏览器: <span id="browser">加载中...</span></p>
-    <p>操作系统: <span id="os">加载中...</span></p>
-
-    <!-- <br>
-    
-    <table class="bc" align="left"> <tr> <th>
-        <script type="text/javascript" src="https://ipaddress.is/js/ipwidget.js"></script>
-        <script type="text/javascript">var ip_widget_var = ip_widget_var || [];ip_widget("#eeeeee","#cacaca45","#000000",0,0,800);</script>
-        <a href="http://my.ipaddress.is"></a>
-    </th> </tr> </table> -->
     
     <h2>Site Disclaimer</h2>
 
@@ -132,7 +130,6 @@ $("#foot").load("https://lyhspace.com/style/footer.html");
 </script>
 
 <script>
-    // 获取访客的IP和地区信息
     fetch('https://ipinfo.io/json?token=91073ae1975901')
         .then(response => response.json())
         .then(data => {
@@ -140,13 +137,11 @@ $("#foot").load("https://lyhspace.com/style/footer.html");
         document.getElementById('region').textContent = `${data.city}, ${data.region}, ${data.country}`;
     })
         .catch(error => {
-        document.getElementById('ip').textContent = '无法获取IP';
-        document.getElementById('region').textContent = '无法获取地区';
+        document.getElementById('ip').textContent = 'unknown';
+        document.getElementById('region').textContent = 'unknown';
         console.error('Error fetching IP info:', error);
     });
 
-
-    // 获取浏览器和操作系统信息
     function getBrowser(userAgent) {
         if (userAgent.indexOf('Chrome') > -1) {
         return 'Chrome';
@@ -155,7 +150,7 @@ $("#foot").load("https://lyhspace.com/style/footer.html");
         } else if (userAgent.indexOf('Safari') > -1) {
         return 'Safari';
         } else {
-        return '未知浏览器';
+        return 'unknown';
         }
     }
 
@@ -167,7 +162,7 @@ $("#foot").load("https://lyhspace.com/style/footer.html");
         } else if (userAgent.indexOf('Linux') > -1) {
         return 'Linux';
         } else {
-        return '未知操作系统';
+        return 'unknown';
         }
     }
 
