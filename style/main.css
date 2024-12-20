@@ -61,7 +61,7 @@
     width: 70%;
     margin: auto;
     margin-top: 50px;
-    margin-bottom: 140px;
+    margin-bottom: 50px;
     padding: 20px;
     background-color: #dedede70;
     box-shadow:0px 0px 20px #afafaf;
@@ -70,7 +70,7 @@
   .MainPage a:visited {color: #a43339; text-decoration: none;}
   .MainPage a:hover, a:active {color: #e80914; text-decoration: none;}
 
-  .Footer {
+  /* .Footer {
     margin-top: -80px;
     height: 80px;
     z-index: 9999;
@@ -79,18 +79,16 @@
     padding-top: 5px;
     padding-left: 15%;
     padding-right: 15%;
-  }
+  } */
 
-  .wrap {
+  /* .wrap {
     min-height: 100%;
   }
-   
-  /* 列后面清除浮动 */
   .row:after {
     content: "";
     display: table;
     clear: both;
-  }
+  } */
   
   .round_icon{
     width: 150px;
