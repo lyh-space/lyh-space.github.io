@@ -95,8 +95,6 @@
     flex: 1;
     display: flex;
     justify-content: center;
-    height: auto;
-    max-width: 100%;
   }
 
   .visitor-info {
