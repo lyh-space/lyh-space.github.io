@@ -133,18 +133,18 @@ $("#foot").load("https://lyhspace.com/style/footer.html");
 
 <script>
     // 获取访客的IP和地区信息
-    fetch('http://ip-api.com/json/')
+    fetch('https://ipinfo.io/json?token=91073ae1975901')
         .then(response => response.json())
         .then(data => {
-        // 填充IP和地区信息
-        document.getElementById('ip').textContent = data.query;
-        document.getElementById('region').textContent = `${data.city}, ${data.regionName}, ${data.country}`;
-        })
+        document.getElementById('ip').textContent = data.ip;
+        document.getElementById('region').textContent = `${data.city}, ${data.region}, ${data.country}`;
+    })
         .catch(error => {
         document.getElementById('ip').textContent = '无法获取IP';
         document.getElementById('region').textContent = '无法获取地区';
         console.error('Error fetching IP info:', error);
-        });
+    });
+
 
     // 获取浏览器和操作系统信息
     function getBrowser(userAgent) {
