@@ -102,11 +102,11 @@
     text-align: left;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     .content {
-      flex-direction: column; /* 窄屏时改为竖直排列 */
+      flex-direction: column;
     }
     .visitor-info {
-      text-align: center; /* 调整文本居中 */
+      text-align: center;
     }
   }
