@@ -11,7 +11,11 @@
 
 <body>
 
-<div id="head"></div>
+<nav class='Header'>
+    <a href='/'><i class='fa fa-home' aria-hidden='true'></i> Home </a> &emsp;
+    <a href='/research/'><i class='fa fa-graduation-cap' aria-hidden='true'></i> Research </a> &emsp;
+    <a href='/note/'><i class='fa fa-pencil-square-o' aria-hidden='true'></i> Note </a>
+</nav>
 
 <div class="MainPage">
 
@@ -28,7 +32,7 @@
             The president of <strong>Society of Physics Students in Sun Yat-sen University</strong> (SPS-SYSU) in 2022-2023
         </p></li>
         <li><p>
-            Email: <a href="mailto:liyh536@mail2.sysu.edu.cn" target="_blank">liyh536@mail2.sysu.edu.cn</a>
+            Email: <a href="mailto:liyh536@mail2.sysu.edu.cn" target="_blank">liyh536@mail2.sysu.edu.cn</a> or <a href="mailto:Yu-Hao.Li@outlook.com" target="_blank">Yu-Hao.Li@outlook.com</a>
         </p></li>
         <li><p>
             GitHub: <a href="https://github.com/lyh-space" target="_blank">https://github.com/lyh-space</a>
@@ -72,7 +76,7 @@
 
     <br>
 
-    <h2>Skills</h2>
+    <h2>Skill</h2>
     <ul>
         <li>
             <p>
@@ -102,35 +106,67 @@
 
     <h2>Visitor's Information</h2>
 
-    <div class="content">
+    <ul>
+        <li><p>Your IP: <span id="ip">loading...</span></p></li>
+        <li><p>From: <span id="region">loading...</span></p></li>
+        <li><p>Browser: <span id="browser">loading...</span></p></li>
+        <li><p>System: <span id="os">loading...</span></p></li>
+    </ul>
 
-        <div class="globe">
-            <div style="width: 50%;">
-            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Xd5ZB1Z29QUKT6b4BFe0lXI7q9UZvq19Ln8f5ZteGOc"></script>
-            </div>
-        </div>
-
-        <div class="visitor-info">
-            <p>Your IP: <span id="ip">loading...</span></p>
-            <p>From: <span id="region">loading...</span></p>
-            <p>Browser: <span id="browser">loading...</span></p>
-            <p>System: <span id="os">loading...</span></p>
-        </div>
-
-    </div>
-    
     <h2>Site Disclaimer</h2>
 
-    <div id="foot"></div>
+    <ul>
+        <li><p>
+            This site has been running for <span id='sitetime'></span> days. <a id="last-updated">Loading...</a>
+        </p></li>
+        <li><p>
+            Copyright &copy; 2024 Li Yu-Hao. All Rights Reserved.
+        </p></li>
+    </ul>
     
 </div>
 
 <br><br>
 
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-$("#head").load("https://lyhspace.com/style/header.html");
-$("#foot").load("https://lyhspace.com/style/footer.html");
+    function siteTime(){
+        window.setTimeout("siteTime()", 1000);
+        var days = 24 * 60 * 60 * 1000;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth()+1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        var t1 = Date.UTC(2024, 4, 12, 14, 0, 0);
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2-t1;
+        var diffDays = Math.floor((diff/days));
+        document.getElementById("sitetime").innerHTML=diffDays;
+    }
+    siteTime();
+</script>
+
+<script>
+    const repoUrl = "https://api.github.com/repos/lyh-space/lyh-space.github.io";
+    const lastUpdatedElement = document.getElementById('last-updated');
+
+    fetch(repoUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch GitHub API");
+            }
+            return response.json();
+        })
+        .then(data => {
+            const updatedAt = new Date(data.updated_at);
+            lastUpdatedElement.textContent = `Last Updated: ${updatedAt.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })} (UTC+8)`;
+        })
+        .catch(error => {
+            lastUpdatedElement.textContent = "Last Updated: unknown";
+            console.error(error);
+        });
 </script>
 
 <script>

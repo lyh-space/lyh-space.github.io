@@ -18,10 +18,32 @@
     siteTime();
 </script>
 
+<script>
+    const repoUrl = "https://api.github.com/repos/lyh-space/lyh-space.github.io";
+    const lastUpdatedElement = document.getElementById('last-updated');
+
+    fetch(repoUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch GitHub API");
+            }
+            return response.json();
+        })
+        .then(data => {
+            const updatedAt = new Date(data.updated_at);
+            lastUpdatedElement.textContent = `Last Updated: ${updatedAt.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })} (UTC+8)`;
+        })
+        .catch(error => {
+            lastUpdatedElement.textContent = "Last Updated: unknown";
+            console.error(error);
+        });
+</script>
+
+
 <ul>
     <li>
         <p>
-            This site has been running for <span id='sitetime'></span> days, last updated on Dec. 24 2024.
+            This site has been running for <span id='sitetime'></span> days. <a id="last-updated">Loading...</a>
         </p>
     </li>
     <li>

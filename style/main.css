@@ -79,34 +79,3 @@
     justify-content: center;
     overflow: hidden;
   }
-
-
-  .content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 800px;
-  }
-
-  .globe {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-
-  .visitor-info {
-    flex: 1;
-    text-align: left;
-  }
-
-  @media (max-width: 800px) {
-    .content {
-      flex-direction: column;
-    }
-    .visitor-info {
-      text-align: center;
-    }
-  }

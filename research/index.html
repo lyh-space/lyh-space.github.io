@@ -11,7 +11,11 @@
 
 <body>
         
-<div id="head"></div>
+<nav class='Header'>
+    <a href='/'><i class='fa fa-home' aria-hidden='true'></i> Home </a> &emsp;
+    <a href='/research/'><i class='fa fa-graduation-cap' aria-hidden='true'></i> Research </a> &emsp;
+    <a href='/note/'><i class='fa fa-pencil-square-o' aria-hidden='true'></i> Note </a>
+</nav>
 
 <div class="MainPage">
 
@@ -31,16 +35,38 @@
 
     <h2>Site Disclaimer</h2>
 
-    <div id="foot"></div>
+    <ul>
+        <li><p>
+            This site has been running for <span id='sitetime'></span> days. <a id="last-updated">Loading...</a>
+        </p></li>
+        <li><p>
+            Copyright &copy; 2024 Li Yu-Hao. All Rights Reserved.
+        </p></li>
+    </ul>
 
 </div>
 
 <br><br>
 
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-$("#head").load("https://lyhspace.com/style/header.html");
-$("#foot").load("https://lyhspace.com/style/footer.html");
+    const repoUrl = "https://api.github.com/repos/lyh-space/lyh-space.github.io";
+    const lastUpdatedElement = document.getElementById('last-updated');
+
+    fetch(repoUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch GitHub API");
+            }
+            return response.json();
+        })
+        .then(data => {
+            const updatedAt = new Date(data.updated_at);
+            lastUpdatedElement.textContent = `Last Updated: ${updatedAt.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })} (UTC+8)`;
+        })
+        .catch(error => {
+            lastUpdatedElement.textContent = "Last Updated: unknown";
+            console.error(error);
+        });
 </script>
 
 </body>
