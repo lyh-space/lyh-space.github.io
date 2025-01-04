@@ -50,6 +50,26 @@
 <br><br>
 
 <script>
+    function siteTime(){
+        window.setTimeout("siteTime()", 1000);
+        var days = 24 * 60 * 60 * 1000;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth()+1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        var t1 = Date.UTC(2024, 4, 12, 14, 0, 0);
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2-t1;
+        var diffDays = Math.floor((diff/days));
+        document.getElementById("sitetime").innerHTML=diffDays;
+    }
+    siteTime();
+</script>
+
+<script>
     const repoUrl = "https://api.github.com/repos/lyh-space/lyh-space.github.io";
     const lastUpdatedElement = document.getElementById('last-updated');
 
